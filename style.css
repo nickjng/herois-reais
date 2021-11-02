@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    font-size: arial;
+    background-color: #18191A;
+}
+header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #000;
+    color: red;
+    justify-content: space-between;
+}
+.logo{
+    width: 20%;
+    display: flex;
+    float: left;
+    justify-content: space-between;
+}
+.logo span{
+    font-size: 30px;
+    float: left;
+    display: grid;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+header .container{
+    width: 50%;
+    display: flex;
+    float: right;
+}
+.nav-bar{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+li{
+    color: white;
+}
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+}
+.nav-bar select{
+    border-style: none;
+    background-color: black;
+    color: white;
+}
+
+.content1{
+    margin: 30px;
+    height: 500px;
+    margin-top: 110px;
+    background-color: #242526;
+}
+.definicao{
+    margin-top: 100px;
+    /* background-color: blue; */
+}
+.definicao h1{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+.definicao .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.definicao .container img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50px;
+}
+.definicao span{
+    color: white;
+    font-size: 36px;
+}
+/* boxes */
+.our-heroes{
+    margin-top: 100px ;
+    /* background-color: aqua; */
+}
+.our-heroes h1{
+    color: white;
+    font-size: 36px;
+}
+.our-heroes .container{
+    margin: 20px;
+    /* background-color: blueviolet; */
+}
+.our-heroes .boxes{
+    display: flex;
+    /* background-color: chartreuse; */
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+.our-heroes .box{
+    height: 403px;
+    width: 324px;
+    background-color: brown;
+}
+.our-heroes img{
+    height: 403px;
+    width: 324px;
+}
+
+.iniciativa{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
