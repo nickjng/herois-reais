@@ -57,7 +57,15 @@ li{
     height: 500px;
     margin-top: 110px;
     background-color: #242526;
+    background-image: url(imgs/imagem_heros.jpeg);
+    background-size: cover;
+    color: #ffffff;
+    font-size: 20px;
+    display: grid;
+    align-items: center;
+    text-align: center;
 }
+
 .definicao{
     margin-top: 100px;
     /* background-color: blue; */
@@ -115,6 +123,62 @@ li{
 
 .iniciativa{
     background-color: white;
+    height: 500px;
     padding: 20px;
     text-align: center;
+}
+.iniciativa .container{
+    display: flex;
+    justify-content: space-around;
+}
+.iniciativa img{
+    float: left;
+    width: 500px;
+    height: 334px;
+}
+.iniciativa .tornar-se {
+    float: left;
+    font-size: 24px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+#btn{
+    display: grid;
+    text-align: center;
+    align-items: center;
+    border-radius: 60px ;
+    margin-left: 290px;
+    margin-top: 65px;
+    width: 300px;
+    height: 50px;
+    background-color: aqua;
+}
+#btn:hover{
+    box-shadow: 4px 4px 4px 2px #615757b6 ;
+    cursor: pointer;
+    background-color: brown;
+    animation-name: btn_color;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+@keyframes btn_color {
+    0%{ /*quando a animação chegar ao seus 100%*/
+        background-color: aqua;
+    }
+    25%{ /*quando a animação chegar ao seus 100%*/
+        background-color: rgb(62, 211, 62);
+    }
+    50%{ /*quando a animação chegar ao seus 100%*/
+        background-color: gold;
+    }
+    75%{ /*quando a animação chegar ao seus 100%*/
+        background-color: rgb(218, 72, 72);
+    }
+    100%{ /*quando a animação chegar ao seus 100%*/
+        background-color: aqua;
+    }
+    
 }
