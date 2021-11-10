@@ -116,13 +116,42 @@ li{
     width: 324px;
     background-image: url(imgs/cidada.jpg);
     background-size: cover;
+    filter: grayscale(100%);
+    cursor: pointer;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
 }
+.our-heroes .box1:hover{
+    filter: none;
+    box-shadow: 4px 4px 4px 8px black ;
+    animation: box1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
 .our-heroes .box2{
     height: 403px;
     width: 324px;
     background-color: red;
     background-image: url(imgs/urbanos.jpg);
     background-size: cover;
+    filter: grayscale(100%);
+    cursor: pointer;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+.our-heroes .box2:hover{
+    filter: none;
+    box-shadow: 4px 4px 4px 8px black ;
+    animation: box1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 .our-heroes .box3{
     height: 403px;
@@ -130,6 +159,20 @@ li{
     background-color: red;
     background-image: url(imgs/mlk.png);
     background-size: cover;
+    filter: grayscale(100%);
+    cursor: pointer;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+.our-heroes .box3:hover{
+    filter: none;
+    box-shadow: 4px 4px 4px 8px black ;
+    animation: box1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
 .iniciativa{
