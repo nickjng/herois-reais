@@ -111,14 +111,25 @@ li{
     margin: auto;
     justify-content: space-between;
 }
-.our-heroes .box{
+.our-heroes .box1{
     height: 403px;
     width: 324px;
-    background-color: brown;
+    background-image: url(imgs/cidada.jpg);
+    background-size: cover;
 }
-.our-heroes img{
+.our-heroes .box2{
     height: 403px;
     width: 324px;
+    background-color: red;
+    background-image: url(imgs/urbanos.jpg);
+    background-size: cover;
+}
+.our-heroes .box3{
+    height: 403px;
+    width: 324px;
+    background-color: red;
+    background-image: url(imgs/mlk.png);
+    background-size: cover;
 }
 
 .iniciativa{
