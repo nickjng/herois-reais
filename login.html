@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Herois</title>
+</head>
+<body class="login">
+    <header>
+        <div class="logo">
+            <img src="imgs/heros.png">
+            <span>Herois Reais</span>
+        </div>
+        <div class="container">
+            <ul class="nav-bar">
+                <li>
+                    <a href="#">Civis</a>
+                </li>
+                <li>
+                    <select name="urbanos" id="id_urbanos">
+                        <option value=""><a>Urbanos</a></option>
+                        <option value=""><a href="#">Bombeiros</a></option>
+                        <option value=""><a href="#">Policiais</a></option>
+                        <option value=""><a href="#">Medicos</a></option>
+                    </select>
+                </li>
+                <li>
+                    <a href="#">Historicos</a>
+                </li>
+                <li>
+                    <a href="#">Login</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="#">Seja um Herói</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="formulario">
+        <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+            Nome <br>
+            <input name="nome" type="text" placeholder="Nome">
+            <br>
+            Sobrenome <br>
+            <input name="email" type="text" placeholder="Sobrenome">
+            <br>
+            Nome de heroi <br>
+            <input name="senha" type="text" placeholder="Superman">
+            <br>
+            Data de nascimento <br>
+            <input name="confirmacao-senha" type="date" placeholder="******">
+            <br>
+            Email <br>
+            <input type="text" placeholder="email">
+            <br>
+            senha <br>
+            <input type="password" placeholder="senha" >
+            <br>
+            Confirmar senha <br>
+            <input type="password" placeholder="confirmacao de senha" >
+            <br>
+
+            <button class="btn">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>

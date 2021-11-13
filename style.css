@@ -208,6 +208,10 @@ li{
     height: 50px;
     background-color: aqua;
 }
+#btn a{
+    text-decoration: none;
+    color: black;
+}
 #btn:hover{
     box-shadow: 4px 4px 4px 2px #615757b6 ;
     cursor: pointer;
@@ -235,4 +239,26 @@ li{
         background-color: aqua;
     }
     
+}
+
+/* LOGIN */
+.login{
+    background-image:url(https://cutewallpaper.org/21/gif-background-hd/Space-Stars-Black-Background-Gif-1920x1080-.gif);
+    background-size: cover;
+}
+
+.formulario{
+    text-align: center;
+    display: grid;
+    align-items: center;
+    background-color: #ffffff8e;
+    border-radius: 20px;
+    height: 400px;
+    width: 400px;
+    margin-top: 170px;
+    margin-left: 480px;
+}
+
+.formulario input{
+    text-align: center;
 }
