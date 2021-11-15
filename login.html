@@ -42,29 +42,83 @@
     <div class="formulario">
         <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
             Nome <br>
-            <input name="nome" type="text" placeholder="Nome">
+            <input name="nome" id="nome_usuario" type="text" placeholder="Nome">
             <br>
             Sobrenome <br>
-            <input name="email" type="text" placeholder="Sobrenome">
+            <input name="email" id="sobrenome_usuario" type="text" placeholder="Sobrenome">
             <br>
             Nome de heroi <br>
-            <input name="senha" type="text" placeholder="Superman">
+            <input name="senha" id="nome_heroi" type="text" placeholder="Superman">
             <br>
             Data de nascimento <br>
-            <input name="confirmacao-senha" type="date" placeholder="******">
+            <input name="confirmacao-senha" id="data_nascimento" type="date" placeholder="******">
+            <br>
+            Sexo <br>
+            <select id="sexo">
+                <option value="">--</option>
+                <option value="m">Masculino</option>
+                <option value="f">Ferminino</option>
+                <option value="p">Personalizado</option>
+            </select>
             <br>
             Email <br>
-            <input type="text" placeholder="email">
+            <input type="text" id="email_usuario" placeholder="email">
             <br>
             senha <br>
-            <input type="password" placeholder="senha" >
+            <input type="password" id="senha_usuario" placeholder="senha" >
             <br>
             Confirmar senha <br>
-            <input type="password" placeholder="confirmacao de senha" >
+            <input type="password" id="confirmacao-senha" placeholder="confirmacao de senha" >
             <br>
 
-            <button class="btn">Cadastrar</button>
+            <button onclick="cadastrar()" class="btn">Cadastrar</button>
         </form>
     </div>
 </body>
 </html>
+<script>
+    
+    function cadastrar() {
+        aguardar();
+
+        var nomeVar = nome_usuario.value;
+        var sobrenomeVar = email_usuario.value;
+        var nomeheroiVar = nome_heroi.value;
+        var datanascimentoVar = data_nascimento.value;
+        var sexoVar = sexo.value;
+        var emailVar = email.usuario.value;
+        var senhaVar = senha_usuario.value;
+        var confirmacaosenhaVar = confirmacao-senha.value;
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: nomeVar,
+                sobrenome: sobrenomeVar,
+                nome_heroi: nomeheroiVar,
+                dataNascimento: datanascimentoVar,
+                sexo: sexoVar,
+                email: emailVar,
+                senha: senhaVar,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "login.html";
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+    }
+
+</script>

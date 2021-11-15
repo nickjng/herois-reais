@@ -268,7 +268,65 @@ li{
     margin-top: 80px;
     width: 100%;
     height: 550px;
-    background-color: green;
-    background-image: url(https://i.pinimg.com/originals/ee/bc/60/eebc60bd8e194271acdb0d8893362da6.gif);
+    /* background-color: green; */
+    /* background-image: url(https://th.bing.com/th/id/R.d37242ea4705cb0e47519e01d62747ad?rik=4E7iC5trnFw8uA&riu=http%3a%2f%2fwww.judecollins.com%2fwp-content%2fuploads%2f2017%2f04%2fScreen-Shot-2017-04-16-at-10.17.48-768x312.png&ehk=lJWCQMkbOVxWk0k6SDQJkuW0KjDIm61TmofaZs8raK0%3d&risl=&pid=ImgRaw&r=0); */
     background-size: cover;
+    animation-name: change_background;
+    animation-timing-function: ease;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
+@keyframes change_background {
+    0%{ /*quando a animação chegar ao seus 100%*/
+        background-image: url(https://th.bing.com/th/id/R.d37242ea4705cb0e47519e01d62747ad?rik=4E7iC5trnFw8uA&riu=http%3a%2f%2fwww.judecollins.com%2fwp-content%2fuploads%2f2017%2f04%2fScreen-Shot-2017-04-16-at-10.17.48-768x312.png&ehk=lJWCQMkbOVxWk0k6SDQJkuW0KjDIm61TmofaZs8raK0%3d&risl=&pid=ImgRaw&r=0);
+        background-size: cover;
+    }
+    25%{ /*quando a animação chegar ao seus 100%*/
+        background-image: url(https://elsolweb.tv/wp-content/uploads/2017/10/Einstein.jpg);
+        background-size: cover;
+    }
+    50%{ /*quando a animação chegar ao seus 100%*/
+        background-image: url(https://www.revistapodium.com/wp-content/uploads/2019/09/369147_908453_40_anos_do_capacete_de_ayrton_senna.jpg);
+        background-size: cover;
+    }
+    75%{ /*quando a animação chegar ao seus 100%*/
+        background-image: url(https://brasilguns.com.br/blog/wp-content/uploads/2017/10/hacksaw-ridge-2560x1440-2016-movies-hd-3188.jpg);
+        background-size: cover;
+    }
+    100%{ /*quando a animação chegar ao seus 100%*/
+        background-image: url(https://th.bing.com/th/id/R.d37242ea4705cb0e47519e01d62747ad?rik=4E7iC5trnFw8uA&riu=http%3a%2f%2fwww.judecollins.com%2fwp-content%2fuploads%2f2017%2f04%2fScreen-Shot-2017-04-16-at-10.17.48-768x312.png&ehk=lJWCQMkbOVxWk0k6SDQJkuW0KjDIm61TmofaZs8raK0%3d&risl=&pid=ImgRaw&r=0);
+        background-size: cover;
+    }
+}
+.herois-historicos{
+    text-align: center;
+    color: white;
+    /* background-color: white ; */
+    
+}
+.boxes{
+    /* background-color: red; */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.boxes img{
+    float: left;
+    width: 400px;
+}
+.box-text{
+    /* padding: 20px; */
+    /* background-color: rgba(255, 255, 255, 0.541); */
+    height: 200px;
+    width: 700px;
+    margin-top: 80px;
+    /* margin-right: 300px; */
+    text-align: left;
+    float: left;
+    border-radius: 20px;
+}
+
+
