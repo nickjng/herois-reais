@@ -2,6 +2,10 @@ body{
     margin: 0;
     font-size: arial;
     background-color: #18191A;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none;
 }
 header{
     position: fixed;
@@ -10,21 +14,29 @@ header{
     height: 80px;
     width: 100%;
     background-color: #000;
-    color: red;
     justify-content: space-between;
+}
+header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 0;
 }
 .logo{
     width: 20%;
     display: flex;
     float: left;
-    justify-content: space-between;
+}
+.logo img{
+    width: 106.81;
+    height: 80px;
 }
 .logo span{
     font-size: 30px;
     float: left;
     display: grid;
-    align-items: flex-end;
-    margin-bottom: 15px;
+    align-items: center;
+    /* font-family: 'Bebas Neue', cursive; */
+    font-family: 'Dancing Script', cursive;
 }
 
 header .container{
@@ -217,7 +229,7 @@ li{
     cursor: pointer;
     background-color: brown;
     animation-name: btn_color;
-    animation-duration: 10s;
+    animation-duration: 6s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: normal;
@@ -241,26 +253,43 @@ li{
     
 }
 
-/* LOGIN */
-.login{
-    background-image:url(https://cutewallpaper.org/21/gif-background-hd/Space-Stars-Black-Background-Gif-1920x1080-.gif);
+/* cadastro */
+.cadastro{
+    background-image:url(https://thumbs.gfycat.com/ComplexNiceBadger-max-1mb.gif);
+    /* background-image: url(https://thumbs.gfycat.com/CooperativeYearlyLamprey-size_restricted.gif); */
     background-size: cover;
 }
 
 .formulario{
     text-align: center;
-    display: grid;
-    align-items: center;
+    /* display: grid; */
+    /* align-items: center; */
     background-color: #ffffff8e;
     border-radius: 20px;
     height: 400px;
     width: 400px;
     margin-top: 170px;
-    margin-left: 480px;
+    margin-left: 900px;
 }
 
+.formulario .campo{
+    margin-top: 10px;
+    display: flex;
+    background-color: white ;
+    height: 20px;
+    margin-left:35px;
+    width: 80% ;
+    align-items: center;
+}
+.formulario img{
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
 .formulario input{
-    text-align: center;
+    border: none;
+    width: 90%;
+    outline: 0;
 }
 
 /* HEROIS HISTORICOS */
@@ -268,8 +297,9 @@ li{
     margin-top: 80px;
     width: 100%;
     height: 550px;
-    /* background-color: green; */
-    /* background-image: url(https://th.bing.com/th/id/R.d37242ea4705cb0e47519e01d62747ad?rik=4E7iC5trnFw8uA&riu=http%3a%2f%2fwww.judecollins.com%2fwp-content%2fuploads%2f2017%2f04%2fScreen-Shot-2017-04-16-at-10.17.48-768x312.png&ehk=lJWCQMkbOVxWk0k6SDQJkuW0KjDIm61TmofaZs8raK0%3d&risl=&pid=ImgRaw&r=0); */
+    display: grid;
+    align-items: center;
+    text-align: center;
     background-size: cover;
     animation-name: change_background;
     animation-timing-function: ease;
@@ -281,52 +311,70 @@ li{
 @keyframes change_background {
     0%{ /*quando a animação chegar ao seus 100%*/
         background-image: url(https://th.bing.com/th/id/R.d37242ea4705cb0e47519e01d62747ad?rik=4E7iC5trnFw8uA&riu=http%3a%2f%2fwww.judecollins.com%2fwp-content%2fuploads%2f2017%2f04%2fScreen-Shot-2017-04-16-at-10.17.48-768x312.png&ehk=lJWCQMkbOVxWk0k6SDQJkuW0KjDIm61TmofaZs8raK0%3d&risl=&pid=ImgRaw&r=0);
-        background-size: cover;
     }
     25%{ /*quando a animação chegar ao seus 100%*/
         background-image: url(https://elsolweb.tv/wp-content/uploads/2017/10/Einstein.jpg);
-        background-size: cover;
     }
     50%{ /*quando a animação chegar ao seus 100%*/
         background-image: url(https://www.revistapodium.com/wp-content/uploads/2019/09/369147_908453_40_anos_do_capacete_de_ayrton_senna.jpg);
-        background-size: cover;
     }
     75%{ /*quando a animação chegar ao seus 100%*/
         background-image: url(https://brasilguns.com.br/blog/wp-content/uploads/2017/10/hacksaw-ridge-2560x1440-2016-movies-hd-3188.jpg);
-        background-size: cover;
     }
     100%{ /*quando a animação chegar ao seus 100%*/
         background-image: url(https://th.bing.com/th/id/R.d37242ea4705cb0e47519e01d62747ad?rik=4E7iC5trnFw8uA&riu=http%3a%2f%2fwww.judecollins.com%2fwp-content%2fuploads%2f2017%2f04%2fScreen-Shot-2017-04-16-at-10.17.48-768x312.png&ehk=lJWCQMkbOVxWk0k6SDQJkuW0KjDIm61TmofaZs8raK0%3d&risl=&pid=ImgRaw&r=0);
-        background-size: cover;
     }
+}
+.banner span{
+    color: #ffffff;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .herois-historicos{
     text-align: center;
     color: white;
     /* background-color: white ; */
-    
 }
 .boxes{
     /* background-color: red; */
     color: white;
     display: flex;
     justify-content: space-around;
+    margin-top: 20px;
 }
 
 .boxes img{
     float: left;
     width: 400px;
+    height: 495.05;
 }
 .box-text{
     /* padding: 20px; */
     /* background-color: rgba(255, 255, 255, 0.541); */
     height: 200px;
     width: 700px;
-    margin-top: 80px;
+    /* margin-top: 80px; */
     /* margin-right: 300px; */
     text-align: left;
     float: left;
     border-radius: 20px;
+}
+.nome-hero{
+    text-align: center;
+    background-color: #1a0202;
+    width: 20%;
+    border: solid;
+    border-color: #5e4325;
+}
+.desc-hero{
+    padding: 10px;
+    margin-top: 10px;
+    float: left;
+    background-color: #1a0202;
+    width: 100%;
+    height: 300px;
+    border: solid;
+    border-color: #5e4325;
 }
 
 

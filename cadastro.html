@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap" rel="stylesheet">
     <title>Herois</title>
 </head>
-<body class="login">
+<body class="cadastro">
     <header>
         <div class="logo">
             <img src="imgs/heros.png">
-            <span>Herois Reais</span>
+            <span><a href="index.html">Heroes</a></span>
         </div>
         <div class="container">
             <ul class="nav-bar">
@@ -27,7 +30,7 @@
                     </select>
                 </li>
                 <li>
-                    <a href="#">Historicos</a>
+                    <a href="historicos.html">Historicos</a>
                 </li>
                 <li>
                     <a href="#">Login</a>
@@ -41,19 +44,20 @@
     </header>
     <div class="formulario">
         <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
-            Nome <br>
-            <input name="nome" id="nome_usuario" type="text" placeholder="Nome">
+            <h3>Seja um heroi, faça o seu cadastro</h3>
+            <div class="campo">
+                <img src="https://icons.veryicon.com/png/o/system/ued_v10-of-shengye-group/general-user-name-icon.png">
+                <input name="nome" id="nome_usuario" type="text" placeholder="Nome">
+            </div>
+            <div class="campo">
+                <img src="https://icons.veryicon.com/png/o/system/ued_v10-of-shengye-group/general-user-name-icon.png">
+                <input name="email" id="sobrenome_usuario" type="text" placeholder="Sobrenome">
+            </div>
+            
+            <input name="senha" id="nome_heroi" type="text" placeholder="nome de Heroi">
             <br>
-            Sobrenome <br>
-            <input name="email" id="sobrenome_usuario" type="text" placeholder="Sobrenome">
-            <br>
-            Nome de heroi <br>
-            <input name="senha" id="nome_heroi" type="text" placeholder="Superman">
-            <br>
-            Data de nascimento <br>
             <input name="confirmacao-senha" id="data_nascimento" type="date" placeholder="******">
             <br>
-            Sexo <br>
             <select id="sexo">
                 <option value="">--</option>
                 <option value="m">Masculino</option>
@@ -61,13 +65,10 @@
                 <option value="p">Personalizado</option>
             </select>
             <br>
-            Email <br>
             <input type="text" id="email_usuario" placeholder="email">
             <br>
-            senha <br>
             <input type="password" id="senha_usuario" placeholder="senha" >
             <br>
-            Confirmar senha <br>
             <input type="password" id="confirmacao-senha" placeholder="confirmacao de senha" >
             <br>
 
