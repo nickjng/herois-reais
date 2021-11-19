@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap"
+        rel="stylesheet">
     <title>Herois</title>
 </head>
+
 <body class="cadastro">
     <header>
         <div class="logo">
@@ -42,43 +45,64 @@
             </ul>
         </div>
     </header>
-    <div class="formulario">
-        <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
-            <h3>Seja um heroi, faça o seu cadastro</h3>
-            <div class="campo">
-                <img src="https://icons.veryicon.com/png/o/system/ued_v10-of-shengye-group/general-user-name-icon.png">
-                <input name="nome" id="nome_usuario" type="text" placeholder="Nome">
-            </div>
-            <div class="campo">
-                <img src="https://icons.veryicon.com/png/o/system/ued_v10-of-shengye-group/general-user-name-icon.png">
-                <input name="email" id="sobrenome_usuario" type="text" placeholder="Sobrenome">
-            </div>
-            
-            <input name="senha" id="nome_heroi" type="text" placeholder="nome de Heroi">
-            <br>
-            <input name="confirmacao-senha" id="data_nascimento" type="date" placeholder="******">
-            <br>
-            <select id="sexo">
-                <option value="">--</option>
-                <option value="m">Masculino</option>
-                <option value="f">Ferminino</option>
-                <option value="p">Personalizado</option>
-            </select>
-            <br>
-            <input type="text" id="email_usuario" placeholder="email">
-            <br>
-            <input type="password" id="senha_usuario" placeholder="senha" >
-            <br>
-            <input type="password" id="confirmacao-senha" placeholder="confirmacao de senha" >
-            <br>
+    <div class="container">
+        <div class="marca">
+            <img src="./imgs/heros.png" alt="">    
+        </div>
+        <div class="formulario">
+            <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                <h3>Seja um heroi<br>
+                    faça o seu cadastro</h3>
+                <div class="cadastro-campos">
+                    <div class="campo">
+                        <img
+                            src="https://icons.veryicon.com/png/o/system/ued_v10-of-shengye-group/general-user-name-icon.png">
+                        <input id="nome_usuario" type="text" placeholder="Nome">
+                    </div>
+                    <div class="campo">
+                        <img
+                            src="https://icons.veryicon.com/png/o/system/ued_v10-of-shengye-group/general-user-name-icon.png">
+                        <input id="sobrenome_usuario" type="text" placeholder="Sobrenome">
+                    </div>
+                    <div class="campo">
+                        <img src="https://www.nicepng.com/png/full/90-903779_super-hero-icon.png">
+                        <input id="nome_heroi" type="text" placeholder="nome de Heroi">
+                    </div>
+                    <div class="campo">
+                        <!-- <img src="https://cdn.onlinewebfonts.com/svg/download_222368.png"> -->
+                        <input style="text-align: center; margin-left: 30px;" id="data_nascimento" type="date">
+                    </div>
+                    <div class="campo">
+                        <select id="sexo">
+                            <option value="">Escolha seu sexo</option>
+                            <option value="m">Masculino</option>
+                            <option value="f">Ferminino</option>
+                            <option value="p">Personalizado</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <img src="https://cdn.icon-icons.com/icons2/2768/PNG/512/email_icon_176616.png">
+                        <input type="text" id="email_usuario" placeholder="email">
+                    </div>
+                    <div class="campo">
+                        <img src="https://static.thenounproject.com/png/16205-200.png">
+                        <input type="password" id="senha_usuario" placeholder="senha">
+                    </div>
+                    <div class="campo">
+                        <img src="https://static.thenounproject.com/png/16205-200.png">
+                        <input type="password" id="confirmacao-senha" placeholder="confirmacao de senha">
+                    </div>
 
-            <button onclick="cadastrar()" class="btn">Cadastrar</button>
-        </form>
+                    <button onclick="cadastrar()" class="btn">Cadastrar</button>
+                </div>
+            </form>
     </div>
+</div>
 </body>
+
 </html>
 <script>
-    
+
     function cadastrar() {
         aguardar();
 
@@ -89,7 +113,7 @@
         var sexoVar = sexo.value;
         var emailVar = email.usuario.value;
         var senhaVar = senha_usuario.value;
-        var confirmacaosenhaVar = confirmacao-senha.value;
+        var confirmacaosenhaVar = confirmacao - senha.value;
 
         fetch("/usuarios/cadastrar", {
             method: "POST",
