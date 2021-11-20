@@ -50,7 +50,11 @@
             <img src="./imgs/heros.png" alt="">    
         </div>
         <div class="formulario">
+
+            <div id="form_cadastro" method="post" onsubmit="return cadastrar()">
+
             <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+
                 <h3>Seja um heroi<br>
                     faça o seu cadastro</h3>
                 <div class="cadastro-campos">
@@ -90,10 +94,15 @@
                     </div>
                     <div class="campo">
                         <img src="https://static.thenounproject.com/png/16205-200.png">
-                        <input type="password" id="confirmacao-senha" placeholder="confirmacao de senha">
+
+                        <input type="password" id="confirmacao_senha" placeholder="confirmacao de senha">
+                        
+                    </div>
+                    <button onclick="cadastrar()" class="btn">Cadastrar</button>
+                </div>
+            </div>
                     </div>
 
-                    <button onclick="cadastrar()" class="btn">Cadastrar</button>
                 </div>
             </form>
     </div>
@@ -104,16 +113,19 @@
 <script>
 
     function cadastrar() {
-        aguardar();
 
         var nomeVar = nome_usuario.value;
-        var sobrenomeVar = email_usuario.value;
+        var sobrenomeVar = sobrenome_usuario.value;
         var nomeheroiVar = nome_heroi.value;
         var datanascimentoVar = data_nascimento.value;
         var sexoVar = sexo.value;
-        var emailVar = email.usuario.value;
+        var emailVar = email_usuario.value;
         var senhaVar = senha_usuario.value;
+<<<<<<< HEAD
+        var confirmacaosenhaVar = confirmacao_senha.value;
+=======
         var confirmacaosenhaVar = confirmacao - senha.value;
+>>>>>>> 7a9acf12c7d9ba87c56e143122dfea3b6a89eb99
 
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -142,7 +154,6 @@
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
         });
     }
 

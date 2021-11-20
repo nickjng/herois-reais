@@ -28,16 +28,21 @@ CREATE TABLE medida (
 
 
 /* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
+CREATE DATABASE heroes;
 
-USE acquatec;
+USE heroes;
 
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
-);
+	create table usuario(
+	idUsuario int primary key auto_increment,
+	nome varchar(45),
+	sobrenome varchar(45),
+	nome_heroi varchar(30),
+	dtNascimento date,
+	sexo char(1),
+	check (sexo = 'm' or sexo = 'f' or sexo = 'p'),
+	email varchar(100),
+	senha varchar(100)
+)auto_increment = 1000; 
 
 CREATE TABLE aviso (
 	id INT PRIMARY KEY AUTO_INCREMENT,

@@ -63,22 +63,27 @@ function cadastrar(req, res) {
     var nome = req.body.nome;
     var sobrenome = req.body.sobrenome;
     var nome_heroi = req.body.nome_heroi;
+    var dtNascimento = req.body.dataNascimento;
+    var sexo = req.body.sexo;
     var email = req.body.email;
     var senha = req.body.senha;
-    var telefone = req.body.telefone;
-
-    console.log("telefone que chegou novo: " + telefone);
 
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
-    } else if (email == undefined) {
+    } else if (sobrenome == undefined) {
         res.status(400).send("Seu email está undefined!");
-    } else if (senha == undefined) {
+    } else if (nome_heroi == undefined) {
+        res.status(400).send("Seu nome de heroi está undefined!");
+    } else if (dtNascimento == undefined) {
+        res.status(400).send("Sua data está undefined!");
+    } else if(sexo == "") {
+        res.status(400).send("seu sexo está undefined!");
+    } else if(email == undefined){
         res.status(400).send("Sua senha está undefined!");
-    } else if (telefone == undefined) {
+    } else if(senha == undefined){
         res.status(400).send("Sua senha está undefined!");
-    } else {    
-        usuarioModel.cadastrar(nome, email, senha, telefone)
+    }
+        usuarioModel.cadastrar(nome, sobrenome,nome_heroi, dtNascimento,sexo, email, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -94,7 +99,7 @@ function cadastrar(req, res) {
                 }
             );
     }
-}
+
 
 module.exports = {
     entrar,
