@@ -121,12 +121,14 @@
 
         if(nomeVar == "" || sobrenomeVar == "" || nomeheroiVar == "" || datanascimentoVar == "" || sexoVar == "" || emailVar == "" || senhaVar == ""){
             alert("Prencha todos os dados")
-        } else if(confirmacaosenhaVar != senhaVar){
+        } else if((emailVar.indexOf('@') == -1) || (emailVar.indexOf('.com') == -1 )){
+            alert("Campo de email invalido")
+            document.getElementById("email_usuario").style.borderBottom = "ridge red";
+        }else if(confirmacaosenhaVar != senhaVar){
             alert("As senhas não consitem")
             document.getElementById("senha_usuario").style.borderBottom = "ridge red";
             document.getElementById("confirmacao_senha").style.borderBottom = "ridge red";
         } else(
-
 
         fetch("/usuarios/cadastrar", {
             method: "POST",
