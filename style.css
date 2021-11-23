@@ -285,6 +285,9 @@ li{
     margin-left: 100px;
     box-shadow: 4px 4px 4px 2px #615757b6;
 }
+.formulario h3{
+    color: rgb(136, 80, 80);
+}
 .formulario .cadastro-campos{
     margin-top: 10px;
 }
@@ -316,6 +319,76 @@ li{
     width: 85%;
     outline: 0;
 }
+.formulario #btn{
+    width: 150px;
+    height: 25px;
+    margin-left: 235px;
+    margin-top: 15px;
+    background-color: rgb(136, 80, 80);
+    animation: none
+
+}
+/* LOGIN */
+.login{
+    background-image:url(https://thumbs.gfycat.com/ComplexNiceBadger-max-1mb.gif);
+    /* background-image: url(https://thumbs.gfycat.com/CooperativeYearlyLamprey-size_restricted.gif); */
+    background-size: cover;
+}
+.form-to-login{
+    margin-top: 170px;
+    margin-left: 38%;
+    background-color: #ffffff8e;
+    float: left;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    /* box-shadow: 4px 4px 4px 2px #615757b6; */
+}
+.form-to-login h2{
+    margin-top: 60px;
+    color: rgb(136, 80, 80);
+    font-size: 25px;
+}
+.campo-login{
+    margin-top: 10%;
+}
+.campo-login .campo{
+    border-radius: 20px;
+    margin-top: 10px;
+    display: flex;
+    background-color: white ;
+    height: 20px;
+    margin-left:35px;
+    width: 80% ;
+    align-items: center;
+}
+.campo-login .campo img{
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+.campo-login .campo input{
+        border: none;
+        width: 80%;
+        outline: 0;
+}
+.form-to-login #btn{
+    width: 150px;
+    height: 25px;
+    margin-left: 25%;
+    margin-top: 15px;
+    background-color: rgb(136, 80, 80);
+    animation: none
+}
+
+
+
+
+
+
+
+
 
 /* HEROIS HISTORICOS */
 .banner{

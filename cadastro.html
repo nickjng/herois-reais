@@ -51,9 +51,9 @@
         </div>
         <div class="formulario">
 
-            <div id="form_cadastro" method="post" onsubmit="return cadastrar()">
-
-            <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+            <div id="form_cadastro" method="post">
+                <!--  -->
+            <!-- <form id="form_cadastro" method="post" onsubmit="return cadastrar_usuario()"> -->
 
                 <h3>Seja um heroi<br>
                     faça o seu cadastro</h3>
@@ -98,7 +98,7 @@
                         <input type="password" id="confirmacao_senha" placeholder="confirmacao de senha">
                         
                     </div>
-                    <button onclick="cadastrar()" class="btn">Cadastrar</button>
+                    <div onclick="cadastrar_usuario()" id="btn">Cadastrar</div>
                 </div>
             </div>
                     </div>
@@ -112,7 +112,7 @@
 </html>
 <script>
 
-    function cadastrar() {
+    function cadastrar_usuario() {
 
         var nomeVar = nome_usuario.value;
         var sobrenomeVar = sobrenome_usuario.value;
@@ -121,11 +121,17 @@
         var sexoVar = sexo.value;
         var emailVar = email_usuario.value;
         var senhaVar = senha_usuario.value;
-<<<<<<< HEAD
+
         var confirmacaosenhaVar = confirmacao_senha.value;
-=======
-        var confirmacaosenhaVar = confirmacao - senha.value;
->>>>>>> 7a9acf12c7d9ba87c56e143122dfea3b6a89eb99
+
+        if(nomeVar == "" || sobrenomeVar == "" || nomeheroiVar == "" || datanascimentoVar == "" || sexoVar == "" || emailVar == "" || senhaVar == ""){
+            alert("Prencha todos os dados")
+        } else if(confirmacaosenhaVar != senhaVar){
+            alert("As senhas não consitem")
+            document.getElementById("senha_usuario").style.borderBottom = "ridge red";
+            document.getElementById("confirmacao_senha").style.borderBottom = "ridge red";
+        } else(
+
 
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -154,7 +160,7 @@
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-        });
+        }));
     }
 
 </script>
