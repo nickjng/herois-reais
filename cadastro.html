@@ -136,12 +136,12 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                nome: nomeVar,
-                sobrenome: sobrenomeVar,
-                nome_heroi: nomeheroiVar,
-                dataNascimento: datanascimentoVar,
-                sexo: sexoVar,
-                email: emailVar,
+                nome: nomeVar.toLowerCase(),
+                sobrenome: sobrenomeVar.toLowerCase(),
+                nome_heroi: nomeheroiVar.toLowerCase(),
+                dataNascimento: datanascimentoVar.toLowerCase(),
+                sexo: sexoVar.toLowerCase(),
+                email: emailVar.toLowerCase(),
                 senha: senhaVar,
             })
         }).then(function (resposta) {
