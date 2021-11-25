@@ -393,7 +393,7 @@ li{
     background-size: cover;
     animation-name: change_background;
     animation-timing-function: ease;
-    animation-duration: 60s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-fill-mode: forwards;
@@ -466,6 +466,8 @@ li{
     border: solid;
     border-color: #5e4325;
 }
+
+
 /* HEROIS URBANOS */
 .banner-urbanos{
 margin-top: 80px;
@@ -488,6 +490,7 @@ background-size: cover;
     justify-content: space-around;
     width: 100%;
     height: 500px;
+    /* color: white; */
 }
 .firefighter-hero h2{
     margin: 0;
@@ -534,8 +537,112 @@ background-size: cover;
     /* background-color: blue; */
 }
 
+/* HEROIS CIVIS */
+.banner-civis{
+    margin-top: 80px;
+    width: 100%;
+    height: 620px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    animation-name: change_background_civilians;
+    animation-timing-function: ease;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    /* background-image: url(https://imagenes.elpais.com/resizer/Mr_PtE3sLQxKaK19JqS88xTQ_QY=/1960x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/VJBB2VDEBDZOZHVUHE5MWVWVSA.jpg); */
+    /* /* background-image: url(https://images.pexels.com/photos/1426497/pexels-photo-1426497.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200); */
+    background-size: cover; 
+} 
+@keyframes change_background_civilians {
+    0%{ /*quando a animação chegar ao seus 100%*/
+        background-image: url(https://imagenes.elpais.com/resizer/Mr_PtE3sLQxKaK19JqS88xTQ_QY=/1960x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/VJBB2VDEBDZOZHVUHE5MWVWVSA.jpg);
+    }
+    25%{ /*quando a animação chegar ao seus 100%*/
+        background-image: url(https://images.pexels.com/photos/1426497/pexels-photo-1426497.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200);
+    }
+    50%{ /*quando a animação chegar ao seus 100%*/
+        background-image: url(https://i.ytimg.com/vi/KrvTEGFmlSc/maxresdefault.jpg);
+    }
+    75%{ /*quando a animação chegar ao seus 100%*/
+        background-image: url(https://www.state.nj.us/dca/library/spotlight/reentry.jpg);
+    }
+    100%{ /*quando a animação chegar ao seus 100%*/
+        background-image: url(https://imagenes.elpais.com/resizer/Mr_PtE3sLQxKaK19JqS88xTQ_QY=/1960x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/VJBB2VDEBDZOZHVUHE5MWVWVSA.jpg);
+    }
+}
 
+.banner-civis span{
+    color: #ffffff;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
+.Heley-teacher{
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d75cae91-229a-4c0f-bd7c-8f683decca88/d96o8ag-9aebb023-c992-4bf9-8364-506b2bb301b9.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q3NWNhZTkxLTIyOWEtNGMwZi1iZDdjLThmNjgzZGVjY2E4OFwvZDk2bzhhZy05YWViYjAyMy1jOTkyLTRiZjktODM2NC01MDZiMmJiMzAxYjkuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g5N0WT_Tf1vZyVx-td7UCkdnOQfkZfug9R_IhyS9B2Q);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+    /* color: white; */
+}
+.Heley-teacher h2{
+    margin: 0;
+    color: rgb(244, 249, 255);
+}
+.Heley-teacher .descricao{
+    width: 50%;
+    margin-top: 180px;
+    margin-left: 150px;
+    float: left;
+    height: 240px;
+    border-bottom: solid rgb(121, 87, 60);
+    background-color: rgb(68, 116, 68);
+}
+.Vinicius-background{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20191025/pngtree-orange-smoke-in-dark-backkground-image_320071.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+    /* color: white; */
+}
+.Vinicius-background h2{
+    margin: 0;
+    color: rgb(244, 249, 255);
+}
+.Vinicius-background .descricao{
+    width: 50%;
+    margin-top: 180px;
+    margin-right: 150px;
+    float: left;
+    height: 240px;
+    border-bottom: solid rgb(0, 0, 0);
+    background-color: rgb(156, 98, 43);
+}
+.Paula-background{
+    background-image: url(https://istoe.com.br/wp-content/uploads/sites/14/2016/11/42.jpg);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+    /* color: white; */
+}
+.Paula-background h2{
+    margin: 0;
+    color: rgb(156, 98, 43);
+}
+.Paula-background .descricao{
+    width: 50%;
+    margin-top: 180px;
+    margin-left: 150px;
+    float: left;
+    height: 240px;
+    border-bottom: solid rgb(121, 87, 60);
+    background-color: rgb(248, 255, 248);
+}
 
 /* TELA DO USUARIO */
 .user{
