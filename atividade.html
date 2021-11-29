@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Heroes</title>
 </head>
 
@@ -23,8 +24,15 @@
         <div class="theme">
             <h2>Atividades</h2>
         </div>
-        <div class="graph"></div>
-        <div class="graph"></div>
+        <!-- <div class="dash"> -->
+            <div class="graph">
+                <canvas id="pontos_dash" style="width: 100%; height: 100%;"></canvas>
+            </div>
+
+            <div class="graph">
+                <canvas id="categoria_dash" style="width: 100%; height: 100%;"></canvas>
+            </div>
+        <!-- </div> -->
         <div class="tasks">
             <div class="container">
                 nome: <br>
@@ -37,3 +45,43 @@
 </body>
 
 </html>
+<script>
+    const pontos_dash = {
+        type: "line",
+        data: {
+            labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+            datasets: [
+                {
+                    label: "Analise de pontos",
+                    data: [0, 0, 0, 30, 60, 100, 150, 200,200,210,160,80],
+                    backgroundColor: "red",
+                    borderColor: "white"
+                }
+            ]
+        },
+        options: {
+            maintainAspectRatio: false
+        }
+    }
+    const categoria_dash = {
+        type: "doughnut",
+        data: {
+            labels: ["Boa ação", "Heroi", "Super-heroi"],
+            datasets: [
+                {
+                    // label: "blue",
+                    data: [500, 400, 290],
+                    backgroundColor: ['rgb(0, 162, 255)', 'rgb(0, 255, 128)', 'rgb(33, 140, 86)' ]
+                    // borderColor: "white"
+                }
+            ]
+        },
+        options: {
+            maintainAspectRatio: false
+        }
+
+    }
+    var analise_categoria = new Chart(document.getElementById("categoria_dash"), categoria_dash);  
+    var analise_pontos = new Chart(document.getElementById("pontos_dash"), pontos_dash);
+
+</script>
