@@ -681,17 +681,17 @@ background-size: cover;
 }
 .atividades{
     margin-left: 300px;
-    background-color: #212121;
+    background-color: #0e0d0d;
     width: 100%;
     height: 695px;
 }
-.atividades .theme{
+.theme{
     text-align: center;
     color: white;
     font-size: 20px;
 }
 .graph{
-    background-color: #303030;
+    background-color: #3030305e;
     display: inline-block;
     width: 45%;
     height: 250px;
@@ -709,4 +709,19 @@ background-size: cover;
     margin-top: 50px;
     /* margin: auto; */
     color: white;
+}
+
+
+
+/* TELA DE RANKING */
+.ranking{
+    margin-left: 300px;
+    background-color: #0e0d0d;
+    width: 100%;
+    height: 695px;
+}
+.theme{
+    text-align: center;
+    color: white;
+    font-size: 20px;
 }
