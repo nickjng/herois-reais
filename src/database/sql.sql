@@ -28,6 +28,8 @@ CREATE TABLE medida (
 
 
 /* para workbench - local - desenvolvimento */
+create database heroes;
+use heroes;
 CREATE DATABASE heroes;
 
 USE heroes;
@@ -41,21 +43,22 @@ USE heroes;
 	sexo char(1),
 	check (sexo = 'm' or sexo = 'f' or sexo = 'p'),
 	email varchar(100),
-	senha varchar(100)
-)auto_increment = 1000; 
+	senha varchar(100),
+    pontos int
+)auto_increment = 1000;
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-    descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-); 
+create table Atividades(
+idAtividade int primary key auto_increment,
+nome_atividade varchar(45),
+descricao varchar(200),
+categoria varchar(20),
+pontos_atividade int
+);
 
-CREATE TABLE medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	temperatura DECIMAL,
-	umidade DECIMAL,
-	momento DATETIME,
-	fk_aquario INT
+create table Historico(
+fkUsuario int,
+foreign key (fkUsuario) references usuario(idUsuario),
+fkAtividade int,
+foreign key (fkAtividade) references Atividades(idAtividade),
+data_finalizada date
 );
