@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heroes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="funcoes.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap"
@@ -100,8 +101,9 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.EMAIL = json.email;
+                    sessionStorage.NOME = json.nome;
+                    sessionStorage.NOME_HEROI = json.nome_heroi
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {

@@ -6,33 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="funcoes.js"></script>
     <title>Document</title>
 </head>
 
-<body class="user">
+<body onload="validarSessao()" class="user">
     <div class="menu">
         <img src="imgs/heros.png">
-        <h3>nome do heroi</h3>
+        <h3 id="b_usuario"></h3>
         <div class="opcoes">
-            <h3><a href="#">Atividades</a></h3>
-            <h3><a href="#">Ranking</a></h3>
-            <h3><a href="#">Sair</a></h3>
+            <h3><a href="atividade.html">Atividades</a></h3>
+            <h3><a href="Ranking.html">Ranking</a></h3>
+            <h3 id="sair_home"><a onclick="limparSessao()" href="#index.html">Sair</a></h3>
         </div>
     </div>
-    <div class="ranking">
+    <div onload="rankear()" class="ranking">
         <div class="theme">
             <h2>Ranking</h2>
         </div>
-        <div id="posicoes">
+        <div id="div_posicoes">
         </div>
     </div>
 </body>
 </html>
 <script>
-    for(var i = 0; i < 10; i++){
-        posicoes.innHTML = `
-        select * from usuario;
+    function rankear(){
         
-        `
     }
 </script>
