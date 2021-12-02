@@ -14,7 +14,7 @@
     <title>Heroes</title>
 </head>
 
-<body onload="validarSessao()" class="user">
+<body onload="validarSessao(), listar(sessionStorage.ID_USUARIO)" class="user">
     <div class="menu">
         <img src="imgs/heros.png">
         <h3 id="b_usuario"></h3>
@@ -50,6 +50,21 @@
 
 </html>
 <script>
+    var id_usuario = sessionStorage.ID_USUARIO;
+    fetch("categoria/atividade").then(function (res) {
+        res.json().then(function (json) {
+            console.log(json);
+            var teste1 = []
+            var qtd_categoria = []
+            
+            for (let index = 0; index < json.length; index++) {
+                // teste1.push(json[index].teste1);
+                qtd_categoria.push(json[index].boa_acao);
+                qtd_categoria.push(json[index].heroi);
+                qtd_categoria.push(json[index].super_heroi);
+                console.log(qtd_categoria)
+            }
+
     const pontos_dash = {
         type: "line",
         data: {
@@ -74,7 +89,7 @@
             datasets: [
                 {
                     // label: "blue",
-                    data: [500, 400, 290],
+                    data: qtd_categoria, 
                     backgroundColor: ['rgb(0, 162, 255)', 'rgb(0, 255, 128)', 'rgb(33, 140, 86)' ],
                     // borderColor: "white"
                 }
@@ -86,6 +101,12 @@
 
     }
     var analise_categoria = new Chart(document.getElementById("categoria_dash"), categoria_dash);  
-    var analise_pontos = new Chart(document.getElementById("pontos_dash"), pontos_dash);
+    var analise_pontos = new Chart(document.getElementById("pontos_dash"), pontos_dash);    
+    
+})
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
 
 </script>

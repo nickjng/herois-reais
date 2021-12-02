@@ -1,20 +1,19 @@
 // sessão
 function validarSessao() {
     // aguardar();
-
+    var id_usuario = sessionStorage.ID_USUARIO;
     var email = sessionStorage.EMAIL;
     var nome = sessionStorage.NOME;
     var nome_hero = sessionStorage.NOME_HEROI
 
     // var h1LoginUsuario = document.getElementById("h1_login_usuario");
-
+    
     if (email != null && nome != null, nome_hero != null) {
         // window.alert(`Seja bem-vindo, ${nome}!`);
         // if (h1LoginUsuario != undefined) {
         //     h1LoginUsuario.innerHTML = email;
         // }
         b_usuario.innerHTML = nome_hero;
-
         // finalizarAguardar();
     } else {
         window.location = "../login.html";

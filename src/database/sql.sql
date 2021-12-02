@@ -44,7 +44,6 @@ USE heroes;
 	check (sexo = 'm' or sexo = 'f' or sexo = 'p'),
 	email varchar(100),
 	senha varchar(100),
-    pontos int
 )auto_increment = 1000;
 
 create table Atividades(
@@ -60,5 +59,6 @@ fkUsuario int,
 foreign key (fkUsuario) references usuario(idUsuario),
 fkAtividade int,
 foreign key (fkAtividade) references Atividades(idAtividade),
-data_finalizada date
+data_finalizada date,
+pontos_usuario int
 );

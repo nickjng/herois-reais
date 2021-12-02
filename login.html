@@ -66,7 +66,6 @@
 
     function login() {
         // aguardar();
-
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
@@ -104,8 +103,8 @@
                     sessionStorage.EMAIL = json.email;
                     sessionStorage.NOME = json.nome;
                     sessionStorage.NOME_HEROI = json.nome_heroi
-                    sessionStorage.ID_USUARIO = json.id;
-
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    
                     setTimeout(function () {
                         window.alert("Bem vindo de volta!");
                         window.location = "atividade.html";
