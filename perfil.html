@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap"
+        rel="stylesheet">
+    <script src="funcoes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Heroes</title>
+</head>
+
+<body onload="validarSessao()" class="user">
+    <div class="menu">
+        <img src="imgs/heros.png">
+        <h3 id="b_usuario"></h3>
+        <div class="opcoes">
+            <h3><a href="atividade.html">Atividades</a></h3>
+            <h3><a href="perfil.html">Perfil</a></h3>
+            <h3 id="sair_home"><a onclick="limparSessao()" href="index.html">Sair</a></h3>
+        </div>
+    </div>
+    <div class="perfil">
+        <div class="theme">
+            <h2>Seus dados</h2>
+        </div>
+        nome: <span style="color: white;" id="n_usuario"></span> <br>
+        email: <span style="color: white;" id="m_usuario"></span> <br>
+    </div>
+</body>
+</html>

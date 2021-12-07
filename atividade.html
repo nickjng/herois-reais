@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap"
+        rel="stylesheet">
     <script src="funcoes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Heroes</title>
 </head>
 
-<body onload="validarSessao(), listar(sessionStorage.ID_USUARIO)" class="user">
+<body onload="validarSessao()" class="user">
     <div class="menu">
         <img src="imgs/heros.png">
         <h3 id="b_usuario"></h3>
         <div class="opcoes">
             <h3><a href="atividade.html">Atividades</a></h3>
-            <h3><a href="Ranking.html">Ranking</a></h3>
-            <h3 id="sair_home"><a href="#">Sair</a></h3>
+            <h3><a href="perfil.html">Perfil</a></h3>
+            <h3 id="sair_home"><a onclick="limparSessao()" href="index.html">Sair</a></h3>
         </div>
     </div>
     <div class="atividades">
@@ -29,21 +30,65 @@
             <h2>Atividades</h2>
         </div>
         <!-- <div class="dash"> -->
-            <div class="graph">
-                <canvas id="pontos_dash" style="width: 100%; height: 100%;"></canvas>
-            </div>
+        <div class="graph">
+            <canvas id="pontos_dash" style="width: 100%; height: 100%;"></canvas>
+        </div>
 
-            <div class="graph">
-                <canvas id="categoria_dash" style="width: 100%; height: 100%;"></canvas>
-            </div>
+        <div class="graph">
+            <canvas id="categoria_dash" style="width: 100%; height: 100%;"></canvas>
+        </div>
         <!-- </div> -->
         <div class="tasks">
             <div class="container">
-                nome: <br>
-                descrição: <br>
-                categoria: <br>
-
+                <span>
+                    <b>nome</b>: Ajude uma pessoa em um momento dificil<br>
+                    <b>descrição:</b> Caso você conheça alguem que esteja passando por uma situação dificil,
+                    ajude esta pessoa, mostre o seu amor pelo proximo e demonstre o heroi que há dentro de você <br>
+                    <b>categoria</b> <span style="color: rgb(117, 207, 117);">Herói</span> <br>
+                    <button onclick="cadastrar_atividade()" style=" float: right; border-radius: 20px;">Atividade
+                        realizada</button>
+                </span>
             </div>
+            <div class="container">
+                <span>
+                    <b>nome</b>: Entregue flores<br>
+                    <b>descrição:</b> Entregue flores para alguém, essa simples atitude pode melhorar o dia
+                    de muitas pessoas<br>
+                    <b>categoria</b> <span style="color: rgb(0, 162, 255);">Boa ação</span> <br>
+                    <button onclick="cadastrar_atividade()" style=" float: right; border-radius: 20px;">Atividade
+                        realizada</button>
+                </span>
+            </div>
+            <div class="container">
+                <span>
+                    <b>nome</b>:Doe Sangue<br>
+                    <b>descrição:</b> Muitas pessoas hospitalizadas hoje em dia precisam de uma doação de sangue para
+                    poderem sobreviver,
+                    ajude esta causa, doe sangue, e salve uma vida <br>
+                    <b>categoria</b> <span style="color: rgb(33, 140, 86);">Super-herói</span> <br>
+                    <button onclick="cadastrar_atividade()" style=" float: right; border-radius: 20px;">Atividade
+                        realizada</button>
+                </span>
+            </div>
+            <div class="container">
+                <span>
+                    <b>nome</b>: Ensine uma criança<br>
+                    <b>descrição:</b> As crianças são o futuro da nossa geração, ensine uma criança a ler e a escrever, para o bem de uma sociedade proxima.  <br>
+                    <b>categoria</b> <span style="color: rgb(0, 162, 255);">Boa ação</span> <br>
+                    <button onclick="cadastrar_atividade()" style=" float: right; border-radius: 20px;">Atividade
+                        realizada</button>
+                </span>
+            </div>
+            <div class="container">
+                <span>
+                    <b>nome</b>: Leve boas novas<br>
+                    <b>descrição:</b> Noticias boas caem muito bem nos dias atuais.<br>
+                    <b>categoria</b> <span style="color: rgb(0, 162, 255);">Boa ação</span> <br>
+                    <button onclick="cadastrar_atividade()" style=" float: right; border-radius: 20px;">Atividade
+                        realizada</button>
+                </span>
+            </div>
+
         </div>
     </div>
 </body>
@@ -56,7 +101,7 @@
             console.log(json);
             var teste1 = []
             var qtd_categoria = []
-            
+
             for (let index = 0; index < json.length; index++) {
                 // teste1.push(json[index].teste1);
                 qtd_categoria.push(json[index].boa_acao);
@@ -65,48 +110,70 @@
                 console.log(qtd_categoria)
             }
 
-    const pontos_dash = {
-        type: "line",
-        data: {
-            labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
-            datasets: [
-                {
-                    label: "Analise de pontos",
-                    data: [0, 0, 0, 30, 60, 100, 150, 200,200,210,160,80],
-                    backgroundColor: "red",
-                    borderColor: "white"
+            const pontos_dash = {
+                type: "line",
+                data: {
+                    labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+                    datasets: [
+                        {
+                            label: "Analise de pontos",
+                            data: [0, 0, 0, 30, 60, 100, 150, 200, 200, 210, 160, 80],
+                            backgroundColor: "red",
+                            borderColor: "white"
+                        }
+                    ]
+                },
+                options: {
+                    maintainAspectRatio: false
                 }
-            ]
-        },
-        options: {
-            maintainAspectRatio: false
-        }
-    }
-    const categoria_dash = {
-        type: "doughnut",
-        data: {
-            labels: ["Boa ação", "Heroi", "Super-heroi"],
-            datasets: [
-                {
-                    // label: "blue",
-                    data: qtd_categoria, 
-                    backgroundColor: ['rgb(0, 162, 255)', 'rgb(0, 255, 128)', 'rgb(33, 140, 86)' ],
-                    // borderColor: "white"
+            }
+            const categoria_dash = {
+                type: "doughnut",
+                data: {
+                    labels: ["Boa ação", "Heroi", "Super-heroi"],
+                    datasets: [
+                        {
+                            // label: "blue",
+                            data: [100, 60, 30],
+                            backgroundColor: ['rgb(0, 162, 255)', 'rgb(0, 255, 128)', 'rgb(33, 140, 86)'],
+                            // borderColor: "white"
+                        }
+                    ]
+                },
+                options: {
+                    maintainAspectRatio: false
                 }
-            ]
-        },
-        options: {
-            maintainAspectRatio: false
-        }
 
-    }
-    var analise_categoria = new Chart(document.getElementById("categoria_dash"), categoria_dash);  
-    var analise_pontos = new Chart(document.getElementById("pontos_dash"), pontos_dash);    
-    
-})
+            }
+            var analise_categoria = new Chart(document.getElementById("categoria_dash"), categoria_dash);
+            var analise_pontos = new Chart(document.getElementById("pontos_dash"), pontos_dash);
+
+        })
     }).catch(function (erro) {
         console.log(erro);
     })
+
+    // função para cadastrar atividade:
+    var atividades = [] // vetor global
+    function cadastrar_atividade() {
+        window.alert("Muito obrigado, atividade realizada com sucesso")
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </script>

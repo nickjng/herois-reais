@@ -4,7 +4,7 @@ function validarSessao() {
     var id_usuario = sessionStorage.ID_USUARIO;
     var email = sessionStorage.EMAIL;
     var nome = sessionStorage.NOME;
-    var nome_hero = sessionStorage.NOME_HEROI
+    var nome_hero = sessionStorage.NOME_HEROI;
 
     // var h1LoginUsuario = document.getElementById("h1_login_usuario");
     
@@ -13,7 +13,10 @@ function validarSessao() {
         // if (h1LoginUsuario != undefined) {
         //     h1LoginUsuario.innerHTML = email;
         // }
+
         b_usuario.innerHTML = nome_hero;
+        n_usuario.innerHTML = nome;
+        m_usuario.innerHTML = email;
         // finalizarAguardar();
     } else {
         window.location = "../login.html";
