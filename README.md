@@ -1,2 +1,3 @@
 # herois-reais
-Site institucional do meu trabalho individual da Bandtec
+Projeto individual feito na Faculdade São Paulo Tech School. 
+
